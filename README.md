@@ -1,7 +1,9 @@
-## Why are you interested in this field/domain?
+## Project Brainstorm Questions
+
+#### Why are you interested in this field/domain?
 We want to understand just how large fast food companies really are, and how far they spread across the globe. It would be very interesting to do an in depth analysis on which companies are most popular/successful in different regions.
 
-### What other examples of data driven project have you found related to this domain (share at least 3)?
+#### What other examples of data driven project have you found related to this domain (share at least 3)?
   1. We looked at financial statements and other company reports to investors. 
   2. We looked at different news articles that visualized company progress on a national and global scale
   3. We also looked at different franchise maps individually
