@@ -1,14 +1,14 @@
 ## Project Brainstorm Questions
 
 #### Why are you interested in this field/domain?
-We want to understand just how large fast food companies really are, and how far they spread across the globe. It would be very interesting to do an in depth analysis on which companies are most popular/successful in different regions.
+We are interested in how different industries react to the adjustments of Federal interest rates. For instance, when the Federal Reserve reduces interest rate, how would the US housing market react. We plan to measure the magnitude of industry reaction through measuring the movements of their index funds in the US stock market corresponding to the time frame of interest rate adjustment by the US Federal Reserve.
 
 #### What other examples of data driven project have you found related to this domain (share at least 3)?
-  1. We looked at financial statements and other company reports to investors. 
-  2. We looked at different news articles that visualized company progress on a national and global scale
-  3. We also looked at different franchise maps individually
+  1. Observing and visualizing the performance by particular industries after the Federal interest rates is adjusted at a given point of time.
+  2. Observing and visualizing the fluctuation of the stock market after a Federal interest rate adjustment.
+  3. Pick specific public companies from certain industries as case study that represent the general trend of reaction when the Fed adjusts interest rates.
 
 #### What data-driven questions do you hope to answer about this domain (share at least 3)?
-  1. Which company saw the most growth in number of franchises?
-  2. Which companies are most popular in different areas of the world?
-  3. Which areas of the world generate the most revenue?
+  1. Which industry has the biggest fluctuation?
+  2. What are the general trends prevalent among certain industries when interest rate is adjusted?
+  3. How would the industries as a whole react to the interest rate adjustment?
