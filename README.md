@@ -1,4 +1,4 @@
-## Domain of Interest
+# Domain of Interest
 
 #### Why are you interested in this field/domain?
 We are interested in how different industries react to the adjustments of Federal interest rates. For instance, when the Federal Reserve reduces interest rate, how would the US housing market react. We plan to measure the magnitude of industry reaction through measuring the movements of their index funds in the US stock market corresponding to the time frame of interest rate adjustment by the US Federal Reserve.
@@ -13,7 +13,8 @@ We are interested in how different industries react to the adjustments of Federa
   2. What are the general trends prevalent among certain industries when interest rate is adjusted?
   3. How would the industries as a whole react to the interest rate adjustment?
 
-## Finding Data
+
+# Finding Data
 
   ### Source 1:
 
@@ -23,7 +24,7 @@ We are interested in how different industries react to the adjustments of Federa
   <br />The data is about the Effective Federal Funds Rate that collected by the Federal Reserve Bank of St. Louis. It shows the percentage of the interest rate from 1955 to the present.
 
   **How many observations (rows) are in your data?**
-  <br />1568
+  <br />784
 
   **How many features (columns) are in the data?**
   <br />2 features (Time/ Rate)
@@ -37,16 +38,16 @@ We are interested in how different industries react to the adjustments of Federa
   Where did you download the data (e.g., a web URL: [https://finance.yahoo.com/quote/UGE?p=UGE](https://finance.yahoo.com/quote/UGE?p=UGE))?
 
   **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
-  <br />The data is about the monthly stock price for the ProShares Ultra Consumer Goods (UGE) provided by the New York Stock Exchange Arca from 02/01/2007 until present.
+  <br />The data is about the monthly stock performance for the ProShares Ultra Consumer Goods (UGE) provided by the New York Stock Exchange Arca from 02/01/2007 until present.
 
   **How many observations (rows) are in your data?**
-  <br />155
+  <br />154
 
   **How many features (columns) are in the data?**
   <br />7 features (Date/ Open/ High/ Low/ Close/ Adj Close/ Volume)
 
   **What questions (from above) can be answered using the data in this dataset?**
-  <br />The data provides insights about the fluctuation of consumer good stock price over 12 years.
+  <br />The data provides insights about the fluctuation of stock performance of the consumer goods sector index over 12 years.
 
 
   ### Source 3:
@@ -54,10 +55,10 @@ We are interested in how different industries react to the adjustments of Federa
   Where did you download the data (e.g., a web URL: [https://finance.yahoo.com/quote/QTEC/profile?p=QTEC](https://finance.yahoo.com/quote/QTEC/profile?p=QTEC))?
 
   **How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?**
-  <br />The data is about the monthly stock price for the ProShares Ultra Consumer Goods (UGE) provided by the New York Stock Exchange from 05/02/2006 until present.
+  <br />The data is about the monthly stock performance for the First Trust NASDAQ-100-Technology Sector Index Fund (QTEC) provided by the Nasdaq GM from 05/02/2006 until present.
 
   **How many observations (rows) are in your data?**
-  <br />164
+  <br />163
 
   **How many features (columns) are in the data?**
   <br />7 features (Date/ Open/ High/ Low/ Close/ Adj Close/ Volume)
