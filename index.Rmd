@@ -33,7 +33,7 @@ library(dplyr)
 source('analysis(Kunpei)')
 ```
 
-The graph below demonstrate the fluctuation of Federal Fund Rate from 1957 to 2019.
+The graph below demonstrate the fluctuation of Federal Fund Rate from 2006 to 2019.
 
 ```{r echo=FALSE}
 Federal_rate_change
