@@ -29,7 +29,7 @@ Summary Data
 
 ## Chart 1
 
-The graph below demonstrate the fluctuation of Federal Fund Rate from 2006 to 2019.
+The graph below demonstrates the fluctuation of Federal fund rates from 2006 to 2019.
 
 ```{r echo=FALSE}
 Federal_rate_change
