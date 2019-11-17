@@ -28,10 +28,6 @@ Summary Data
 ## Aggregate Table
 
 ## Chart 1
-```{r, echo=FALSE, include=FALSE}
-library(dplyr)
-source('analysis(Kunpei)')
-```
 
 The graph below demonstrate the fluctuation of Federal Fund Rate from 2006 to 2019.
 
