@@ -13,6 +13,8 @@ ffr_df <- filter(unfiltered_ffr_df, Year >= 2006)
 
 # Install Packages
 library(dplyr)
+library(ggplot2)
+library(plotly)
 
 # Calculations
 qtec_avg_fluctuation <- mean(qtec_df$Fluctuation)
@@ -25,7 +27,23 @@ ffr_avg_rate <- mean(ffr_df$FEDFUNDS)
 ffr_min_rate <- min(ffr_df$FEDFUNDS)
 ffr_max_rate <- max(ffr_df$FEDFUNDS)
 
+# Chart 1
 
+# Chart 2
+chart2_tech <- plot_ly(
+  data = qtec_df, 
+  x = ~Date,     
+  y = ~Open,
+  type = "scatter",
+  mode = "lines",
+  alpha = .7,    
+  hovertext = "y" 
+) %>%
+  layout(
+    title = "QTECH Index Fund",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "Open rate")
+  )
 
 #Code for Chart 1: 
 

@@ -41,5 +41,8 @@ Federal_rate_change
 
 
 ## Chart 2
-
+The graph below shows the Opening rate for QTech Index Fund from 2006 to 2019.
+```{r echo=FALSE}
+chart2_tech
+```
 ## Chart 3
