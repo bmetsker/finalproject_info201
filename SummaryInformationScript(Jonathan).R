@@ -33,5 +33,3 @@ get_summary_info <- function(dataset) {
   
   return(return)
 }
-
-data_table <- get_summary_info(consumer_goods_data)
