@@ -34,12 +34,15 @@ kable(merged_summary_table)
 ```
 
 ## Chart 1
+<<<<<<< HEAD
 ```{r, echo=FALSE, include=FALSE}
 library(dplyr)
 source('analysis(Kunpei).R')
 ```
+=======
+>>>>>>> 23885fe9dc4700118d47080aab6450fca6a60735
 
-The graph below demonstrate the fluctuation of Federal Fund Rate from 2006 to 2019.
+The graph below demonstrates the fluctuation of Federal fund rates from 2006 to 2019.
 
 ```{r echo=FALSE}
 Federal_rate_change
@@ -47,5 +50,8 @@ Federal_rate_change
 
 
 ## Chart 2
-
+The graph below shows the Opening rate for QTech Index Fund from 2006 to 2019.
+```{r echo=FALSE}
+chart2_tech
+```
 ## Chart 3
