@@ -57,6 +57,7 @@ The graph below shows the Opening rate for QTech Index Fund from 2006 to 2019.
 ```{r echo=FALSE}
 chart2
 ```
+We chose bar graph to visualize the trend of volume stocks in different industries. By doing this, we can also see the fluctuation of the funds every day.
 
 ## Chart 3
 The graph below shows the Opening rate for QTech Index Fund from 2007 to 2019.
