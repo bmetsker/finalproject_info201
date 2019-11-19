@@ -1,14 +1,23 @@
-data <- read.csv("data/First_Trust_NASDAQ_100_Technology_Sector_Index_Fund_05022006_11072019.csv", stringsAsFactors = FALSE)
 
-library("ggplot2")
 
-plot <- ggplot(data = data) +
-  geom_point(mapping = aes(
-    x = Date, 
-    y = Adj.Close
-    ))  
+library("plotly")
 
-plot <- ggplot(data = data) +
-  geom_point(mapping = aes(
-    x = Date, y = Adj.Close)) +
-  geom_smooth(x = Date, y = Adj.Close, method = y~poly(x,6), se = TRUE, fullrange = FALSE, level = 0.95)
+fluctuation_plot <- function(dataset) {
+  Fluctuation_Scatter <- plot_ly(
+    data = dataset,      
+    x = ~Date, 
+    y = ~Fluctuation, 
+    type = "scatter",
+    mode = "markers",
+    alpha = .7,
+    hovertext = "Fluctuation"
+  ) %>%
+    layout(
+      title = "Fluctuation Change (2007 to 2019)",                
+      xaxis = list(title = "Date"),
+      yaxis = list(title = "Fluctuation") 
+    )
+}
+
+plot <- fluctuation_plot(qtec_df)
+print(plot)
