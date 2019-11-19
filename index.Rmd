@@ -36,7 +36,6 @@ kable(merged_summary_table)
 ## Chart 1
 <<<<<<< HEAD
 ```{r, echo=FALSE, include=FALSE}
-library(dplyr)
 source('analysis(Kunpei).R')
 ```
 =======
@@ -51,7 +50,12 @@ Federal_rate_change
 
 ## Chart 2
 The graph below shows the Opening rate for QTech Index Fund from 2006 to 2019.
+```{r, echo=FALSE, include= FALSE }
+source('analysis(Mary).R')
+library(plotly)
+qtec_df <- data.frame(read.csv("data/First_Trust_NASDAQ_100_Technology_Sector_Index_Fund_05022006_11072019.csv", stringsAsFactors = FALSE))
+```
 ```{r echo=FALSE}
-chart2_tech
+chart2(qtech_df)
 ```
 ## Chart 3
