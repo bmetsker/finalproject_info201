@@ -1,5 +1,3 @@
-
-
 library("plotly")
 
 fluctuation_plot <- function(dataset) {
