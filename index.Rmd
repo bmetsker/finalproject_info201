@@ -28,10 +28,20 @@ The aggregate table demonstrates three parts of information. First, it shows the
 The table provides insights about whether Federal Funds Rate plays a role in affecting stock price and trading volume for specific industries. 
 
 ```{r echo = FALSE}
-source('analysis(Angel).R')
+source('AggregateTable(Angel).R')
 library(knitr)
 kable(merged_summary_table)
 ```
+
+- [Ave_FFR] = Average Federal Fund Rate
+- [QTEC_max_vol] = The maximum QTEC trading volume of the year
+- [QTEC_FFR_of_max_vol] = The Federal Fund Rate when the maximum QTEC trading  volume happened 
+- [QTEC_min_vol] = The minimum QTEC trading volume of the year
+- [QTEC_FFR_of_min_vol] = The Federal Fund Rate when the minimum QTEC trading volume happened 
+- [UGE_max_vol] = The maximum UGE trading volume of the year
+- [UGE_FFR_of_max_vol] = The Federal Fund Rate when the maximum UGE trading volume happened 
+- [UGE_min_vol] = The minimum UGE trading volume of the year
+- [UGE_FFR_of_min_vol] = The Federal Fund Rate when the minimum UGE trading volume happened 
 
 ## Chart 1
 <<<<<<< HEAD
@@ -54,4 +64,5 @@ The graph below shows the Opening rate for QTech Index Fund from 2006 to 2019.
 ```{r echo=FALSE}
 chart2_tech
 ```
+
 ## Chart 3
