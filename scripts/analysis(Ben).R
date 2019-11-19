@@ -23,3 +23,4 @@ usd_ltd_volume <- sum(usd_df$Volume)
 qtec_ltd_volume <- sum(qtec_df$Volume)
 ffr_avg_rate <- mean(ffr_df$FEDFUNDS)
 ffr_min_rate <- min(ffr_df$FEDFUNDS)
+

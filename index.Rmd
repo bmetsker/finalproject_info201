@@ -7,7 +7,8 @@ output: html_document
 
 ```{r, echo=FALSE, include=FALSE}
 library(dplyr)
-source('analysis(Team).R')
+source('analysis(Ben).R')
+
 ```
 
 ## Introductory Information
@@ -16,18 +17,41 @@ The purpose of our analysis is to compare different industries' performance to c
 ## Summary Information
 Our first datasource is historical data of the [Federal Funds Rate](https://fred.stlouisfed.org/series/FEDFUNDS). Since 2006, interest rates have reached as high as `r ffr_max_rate`% and as low as `r ffr_min_rate`%. The average rate for the last 15 years has been `r ffr_avg_rate`%. This wide range of percentages indicates a rapidly changing market that can drastically effect individual stock prices over time.
 
-Our second source, [the QTEC Fund](https://finance.yahoo.com/quote/QTEC/profile?p=QTEC), is a grouping of technology stocks compiled by NASDAQ. Since 2006, investors have seen an average day price range of `r qtec_avg_fluctuation` and an average open to close difference of `r qtec_avg_day_range`. These etrics tell us that the stock is slightly more volatile than the others we looked at which is typical for the technology sector. Total trading volume for our selected time period is `r qtec_ltd_volume` indicating that with such a large number, the tech sector has been historically a very popular investment area.
+Our second source, [the QTEC Fund](https://finance.yahoo.com/quote/QTEC/profile?p=QTEC), is a grouping of technology stocks compiled by NASDAQ. Since 2006, investors have seen an average day price range of `r qtec_avg_fluctuation` and an average open to close difference of `r qtec_avg_day_range`. These metrics tell us that the stock is slightly more volatile than the others we looked at which is typical for the technology sector. Total trading volume for our selected time period is `r qtec_ltd_volume` indicating that with such a large number, the tech sector has been historically a very popular investment area.
 
 Our third and final source, [the UGE Fund](https://finance.yahoo.com/quote/UGE?p=UGE) is a consumer goods company index. As expected, the industry saw less stock price fluctuation than the tech sector
 with an average day price range of `r usd_avg_fluctuation`, and an average open to close different of `r usd_avg_day_range`. There was also much less activity in this secotr as the total trading volume for our selected period was `r usd_ltd_volume`.
 
-Summary Data
-
-
 ## Aggregate Table
+The aggregate table demonstrates three parts of information. First, it shows the average Federal Fund Rate for each year from 2007 to 2019. Secondly, it includes the maximum and minimum trading volume of the year, as well as the Federate Fund Rate of that month, for the QTEC fund. The third part contains the same information described above, but for the UGE fund. 
+
+The table provides insights about whether Federal Funds Rate plays a role in affecting stock price and trading volume for specific industries. 
+
+```{r echo = FALSE}
+source('analysis(Angel).R')
+library(knitr)
+kable(merged_summary_table)
+```
 
 ## Chart 1
+<<<<<<< HEAD
+```{r, echo=FALSE, include=FALSE}
+library(dplyr)
+source('analysis(Kunpei).R')
+```
+=======
+>>>>>>> 23885fe9dc4700118d47080aab6450fca6a60735
+
+The graph below demonstrates the fluctuation of Federal fund rates from 2006 to 2019.
+
+```{r, echo=FALSE}
+Federal_rate_change
+```
+
 
 ## Chart 2
-
+The graph below shows the Opening rate for QTech Index Fund from 2006 to 2019.
+```{r, echo=FALSE}
+chart2_tech
+```
 ## Chart 3
