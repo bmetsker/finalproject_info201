@@ -63,35 +63,60 @@ merged_summary_table <- Reduce(merge, list(summary_interest_rate, summary_qtec, 
 # Chart 1
 #visualizing Federal Interest Rate record of changes from 2006 to 2019
 
-Federal_rate_change <- plot_ly(
-  data = ffr_df,      
-  x = ~DATE, 
-  y = ~FEDFUNDS, 
-  type = "scatter",
-  mode = "lines",
-  alpha = .7,
-  hovertext = "FEDFUNDs"
-) %>%
-  layout(
-    title = "Federal Fund Rate 2006-2019",                
-    xaxis = list(title = "Date"),
-    yaxis = list(title = "Federal Fund Rate") 
-  )
+fed_fund_plot <- function(dataset) {
+  
+  Federal_rate_change <- plot_ly(
+    data = dataset,      
+    x = ~DATE, 
+    y = ~FEDFUNDS, 
+    type = "scatter",
+    mode = "lines",
+    alpha = .7,
+    hovertext = "FEDFUNDs"
+  ) %>%
+    layout(
+      title = "Federal Interest Rate record of changes from 2006 to 2019",                
+      xaxis = list(title = "Date"),
+      yaxis = list(title = "Federal Fund Interest Rate") 
+    )
+}
 
 # Chart 2
-chart2_tech <- plot_ly(
-  data = qtec_df, 
-  x = ~Date,     
-  y = ~Open,
-  type = "scatter",
-  mode = "lines",
-  alpha = .7,    
-  hovertext = "y" 
-) %>%
-  layout(
-    title = "QTECH Index Fund",
-    xaxis = list(title = "Date"),
-    yaxis = list(title = "Open rate")
-  )
+chart2 <- function(df){
+  plot_map <- plot_ly(
+    data = df, 
+    x = ~Date,     
+    y = ~Volume,         
+    type = "bar", 
+    alpha = .7,    
+    hovertext = "y" 
+  ) %>%
+    layout(
+      title = "Volume Rate of the Stocks",
+      xaxis = list(title = "Date"),
+      yaxis = list(title = "Volume")
+    )
+}
 
+# Chart 3
+fluctuation_plot <- function(dataset) {
+  Fluctuation_Scatter <- plot_ly(
+    data = dataset,      
+    x = ~Date, 
+    y = ~Fluctuation, 
+    type = "scatter",
+    mode = "markers",
+    alpha = .7,
+    hovertext = "Fluctuation"
+  ) %>%
+    layout(
+      title = "Fluctuation Change (2007 to 2019)",                
+      xaxis = list(title = "Date"),
+      yaxis = list(title = "Fluctuation") 
+    )
+}
+
+fedfundplot <- fed_fund_plot(ffr_df)
+chart2 <- chart2(fqtec_df)
+plot <- fluctuation_plot(qtec_df)
 

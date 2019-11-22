@@ -7,8 +7,15 @@ output: html_document
 
 ```{r, echo=FALSE, include=FALSE}
 library(dplyr)
+<<<<<<< HEAD
 source('analysis(Ben).R')
 
+=======
+library(ggplot2)
+library(plotly)
+library(knitr)
+source('analysis(Team).R')
+>>>>>>> d20a9a6b83f282d29d6c0de6016be22931f03e3e
 ```
 
 ## Introductory Information
@@ -28,28 +35,35 @@ The aggregate table demonstrates three parts of information. First, it shows the
 The table provides insights about whether Federal Funds Rate plays a role in affecting stock price and trading volume for specific industries. 
 
 ```{r echo = FALSE}
-source('analysis(Angel).R')
-library(knitr)
 kable(merged_summary_table)
 ```
 
-## Chart 1
-<<<<<<< HEAD
-```{r, echo=FALSE, include=FALSE}
-source('analysis(Kunpei).R')
-```
-=======
->>>>>>> 23885fe9dc4700118d47080aab6450fca6a60735
+- [Ave_FFR] = Average Federal Fund Rate
+- [QTEC_max_vol] = The maximum QTEC trading volume of the year
+- [QTEC_FFR_of_max_vol] = The Federal Fund Rate when the maximum QTEC trading  volume happened 
+- [QTEC_min_vol] = The minimum QTEC trading volume of the year
+- [QTEC_FFR_of_min_vol] = The Federal Fund Rate when the minimum QTEC trading volume happened 
+- [UGE_max_vol] = The maximum UGE trading volume of the year
+- [UGE_FFR_of_max_vol] = The Federal Fund Rate when the maximum UGE trading volume happened 
+- [UGE_min_vol] = The minimum UGE trading volume of the year
+- [UGE_FFR_of_min_vol] = The Federal Fund Rate when the minimum UGE trading volume happened 
 
+## Chart 1
 The graph below demonstrates the fluctuation of Federal fund rates from 2006 to 2019.
 
+<<<<<<< HEAD
 ```{r, echo=FALSE}
 Federal_rate_change
+=======
+```{r echo=FALSE}
+fedfundplot
+>>>>>>> d20a9a6b83f282d29d6c0de6016be22931f03e3e
 ```
-
+We included this chart because we want to show the fluctuation of Federal Fund Rate from 2006 to 2019, and then compare the fluctuations of different industry index from the same time period. 
 
 ## Chart 2
 The graph below shows the Opening rate for QTech Index Fund from 2006 to 2019.
+<<<<<<< HEAD
 <<<<<<< HEAD
 ```{r, echo=FALSE}
 chart2_tech
@@ -58,9 +72,21 @@ chart2_tech
 source('analysis(Mary).R')
 library(plotly)
 qtec_df <- data.frame(read.csv("data/First_Trust_NASDAQ_100_Technology_Sector_Index_Fund_05022006_11072019.csv", stringsAsFactors = FALSE))
-```
+=======
 ```{r echo=FALSE}
+chart2
+>>>>>>> d20a9a6b83f282d29d6c0de6016be22931f03e3e
+```
+We chose bar graph to visualize the trend of volume stocks in different industries. By doing this, we can also see the fluctuation of the funds every day.
+
+## Chart 3
+The graph below shows the Opening rate for QTech Index Fund from 2007 to 2019.
+```{r echo=FALSE}
+<<<<<<< HEAD
 chart2(qtech_df)
 >>>>>>> 9f2a42da19c83bd0e5a5447fd3a8fe00e1f51fbf
+=======
+plot
+>>>>>>> d20a9a6b83f282d29d6c0de6016be22931f03e3e
 ```
-## Chart 3
+We included the fluctuation graph plot to show the gains and losses of the stock. This chart specifically shows the change per month for the First Trust NASDAQ 100 Technology Sector Index Fund.
