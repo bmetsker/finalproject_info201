@@ -1,12 +1,19 @@
 
 # All of the names in here are just placeholders I pulled from the last hw assignment. Feel free to change.
+source("storedtext.R")
 
 ui<- tagList(
   navbarPage(
     theme = shinytheme("flatly"),
     "Federal Funds Rate Change Analysis",
     
-    tabPanel("Metric 1",
+    tabPanel("Introduction",
+             h1(test),
+             test_text,
+             img("lol", src = "Pictures/fc4801baa943d9526e81f45bd0473ea5.jpg")
+             ),
+    
+    tabPanel("FFR/Industry Correlation",
              sidebarPanel(
                selectInput('x1', 'Select X-Axis:', choices = c("state", "category"),
                            selected = "state"),
@@ -19,7 +26,7 @@ ui<- tagList(
           ),
     
     
-    tabPanel("Metric 2",
+    tabPanel("Volume by Industry",
              sidebarPanel(
                radioButtons('x2', 'Change X-Axis:', choices = c("percollege", "percbelowpoverty", "percchildbelowpovert", "percadultpoverty", "percelderlypoverty"),
                             selected = "percollege"),
@@ -33,7 +40,7 @@ ui<- tagList(
           ),
     
     
-    tabPanel("Metric 2",
+    tabPanel("Title?",
              sidebarPanel(
                radioButtons('x2', 'Change X-Axis:', choices = c("percollege", "percbelowpoverty", "percchildbelowpovert", "percadultpoverty", "percelderlypoverty"),
                             selected = "percollege"),
