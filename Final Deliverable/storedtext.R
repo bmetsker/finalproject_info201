@@ -1,3 +1,18 @@
 main_title <- print(HTML("<h1><center><font size=14> Federal Funds Rate Change Analysis </font></center></h1>"))
 team_members <- HTML("<body><center> Angel Lin, Ben Metsker, Jimmy Peng, Jonathan Chen, Mary Giang </center></body>")
 project_explanation_title <- HTML("<h3> Project Explanation </h3>")
+project_explanation <- HTML("<body>
+                            <br>
+                            Throughout this project, we attempted to find a correlation between federal fund rate changes and different NYSE industry stock performance.
+                            </br>
+                            <br>
+                            The federal funds rate is the interest rate at which banks borrow money from the fed. This number will often affect almost every other aspect of the economy in various ways. 
+                            </br>
+                            <br>
+                            Typically, the Federal Reserve Board (The Fed) will change this underlying rate to counteract recession or inflation. If the economy appears to be in a downturn or Bear Market, the fed will often lower interest rates to make borrowing more appealing to banks, companies, and consumers in order to stimulate the economy. This can have one or two effects on different industries stock performance. First, investors will be encouraged by the Fed’s move and will put more money into the market, causing investment vessel prices to rise. Second, investors could become concerned the market will be turning bear quickly and begin to pull money out consistently, causing market prices to tank. 
+                            </br>
+                            <br>
+                            As clearly seen above, knowing exactly what the stock market like the NYSE will do during rate changes is impossible to predict. However, we believe that we can find a more accurate answers by looking at specific industries rather than the market as a whole.
+                            </br>
+                            </body>")
+

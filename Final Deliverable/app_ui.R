@@ -9,7 +9,8 @@ ui<- tagList(
         tabPanel("Introduction",
                  main_title,
                  team_members,
-                 project_explanation_title
+                 project_explanation_title,
+                 project_explanation
         ), 
         
         tabPanel("Race Statistics",
