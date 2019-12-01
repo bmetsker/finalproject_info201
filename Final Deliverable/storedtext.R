@@ -15,4 +15,22 @@ project_explanation <- HTML("<body>
                             As clearly seen above, knowing exactly what the stock market like the NYSE will do during rate changes is impossible to predict. However, we believe that we can find a more accurate answers by looking at specific industries rather than the market as a whole.
                             </br>
                             </body>")
-
+project_sources_title <- HTML("<h3> Sources Used </h3>")
+sources_explanation <- HTML("<body>
+                            <br>
+                            The federal funds rate data that we chose to use comes from the St. Louis Fed website. The St. Louis Fed is a commonly used government data collection site. We filtered the results down to show only 2006 to 2019. This is a substantial amount of time that captures many ups and downs with FFR changes.
+                            </br>
+                            <br>
+                            The market industry data that we selected comes from Yahoo Finance. The site allows us to select a date range which we matched to our FFR data. Wed selected a wide variety of industries that capture many different areas of the market including:
+                            </br>
+                            <br>
+                            <ul>
+                            <li>
+                            Technology
+                            </li>
+                            <li>
+                            Consumer Goods
+                            </li>
+                            </ul>
+                            </br>
+                            </body>")

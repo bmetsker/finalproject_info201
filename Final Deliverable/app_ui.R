@@ -10,10 +10,12 @@ ui<- tagList(
                  main_title,
                  team_members,
                  project_explanation_title,
-                 project_explanation
+                 project_explanation,
+                 project_sources_title,
+                 sources_explanation
         ), 
         
-        tabPanel("Race Statistics",
+        tabPanel("Metric 1",
                  sidebarPanel(
                    selectInput('x1', 'Select X-Axis:', choices = c("state", "category"),
                                selected = "state"),
@@ -26,7 +28,20 @@ ui<- tagList(
         ),
         
         
-        tabPanel("Quality of Life Statistics",
+        tabPanel("Metric 2",
+                 sidebarPanel(
+                   radioButtons('x2', 'Change X-Axis:', choices = c("percollege", "percbelowpoverty", "percchildbelowpovert", "percadultpoverty", "percelderlypoverty"),
+                                selected = "percollege"),
+                   radioButtons('y2', 'Change Y-Axis:', choices = c("poptotal", "popwhite", "popblack", "popamerindian", "popasian"),
+                                selected = "poptotal")
+                   # Radio Buttons on different races 
+                 ),
+                 
+                 mainPanel("College Attendace", plotOutput(outputId = "collegechart"),
+                 )
+        ),
+        
+        tabPanel("Metric 3",
                  sidebarPanel(
                    radioButtons('x2', 'Change X-Axis:', choices = c("percollege", "percbelowpoverty", "percchildbelowpovert", "percadultpoverty", "percelderlypoverty"),
                                 selected = "percollege"),
