@@ -44,11 +44,22 @@ ConsumerGoods <- read.csv("data/ProShares_Ultra_Consumer_Goods_02012007_11072019
 
 colnames(ConsumerGoods) <- c("Date", "ProShares Adj.Close")
 
+Healthcare <- read.csv("data/VHT",  stringsAsFactors = FALSE) %>%
+  select(Date, Adj.Close)
+
+Colnames(Healthcare) <- c("Date", "Healthcare Adj.Close")
+
+RealEstate <- read.csv("data/ICF",  stringsAsFactors = FALSE) %>%
+  select(Date, Adj.Close)
+
+Colnames(RealEstate) <- c("Date", "RealEstate Adj.Close")
+
 ourData <- ConsumerGoods %>%
-  inner_join(FederalFund) %>%
+  inner_join(Healthcare) %>%
+  inner_join(RealEstate) %>%
   inner_join(Nasdaq)
 
-####################################################################
+#Pot for industry index fluctuation 
 
 FluctuationInDifferentIndustry <- plot_ly(
   data = ourData,      
