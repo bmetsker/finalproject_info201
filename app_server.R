@@ -6,7 +6,7 @@ source("Metric1Analysis.R")
 
 server <- function(input, output) {
   output$Metric1Graph <- renderPlotly(
-    FedCompareGraph(input$Metric1Date[1], input$Metric1Date[2], input$Metric1Stock, AdjData)
+    FedCompareGraph(input$Metric1Date[1], input$Metric1Date[2], paste(input$Metric1Stock,"Adj.Close"), AdjData)
   )
     
     

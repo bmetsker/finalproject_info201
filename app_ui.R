@@ -24,7 +24,15 @@ ui<- tagList(
                      end = as.Date(0, origin = "2015-02-01"),
                      min = as.Date(0, origin = "2007-02-01"), 
                      max = as.Date(0, origin = "2015-02-01")),
-                   selectInput('Metric1Stock', 'Select Stock', choices = c("ProShares Adj.Close", "Nasdaq Adj.Close"), selected = "ProShares"),
+                   selectInput(
+                     'Metric1Stock', 
+                     'Select Stock', 
+                     choices = c(
+                       "ProShares", 
+                       "Nasdaq",
+                       "VHT",
+                       "ICF"), 
+                     selected = "ProShares"),
                  ),
                  
                  mainPanel("Comparison Chart", plotlyOutput("Metric1Graph"),
