@@ -20,10 +20,10 @@ ui<- tagList(
                    dateRangeInput(
                      "Metric1Date", 
                      h3("Date range"), 
-                     start = as.Date(0, origin = "2007-02-01"), 
-                     end = as.Date(0, origin = "2015-02-01"),
+                     start = as.Date(0, origin = "2010-02-01"), 
+                     end = as.Date(0, origin = "2015-10-01"),
                      min = as.Date(0, origin = "2007-02-01"), 
-                     max = as.Date(0, origin = "2015-02-01")),
+                     max = as.Date(0, origin = "2019-10-01")),
                    selectInput(
                      'Metric1Stock', 
                      'Select Stock', 
@@ -45,10 +45,10 @@ ui<- tagList(
                    dateRangeInput(
                      "Metric2Date", 
                      h3("Date range"), 
-                     start = as.Date(0, origin = "2007-02-01"), 
-                     end = as.Date(0, origin = "2015-02-01"),
+                     start = as.Date(0, origin = "2010-02-01"), 
+                     end = as.Date(0, origin = "2015-10-01"),
                      min = as.Date(0, origin = "2007-02-01"), 
-                     max = as.Date(0, origin = "2015-02-01")),
+                     max = as.Date(0, origin = "2019-10-01")),
                    radioButtons(
                      'Metric2Stock', 
                      'Select Stock', 
@@ -69,10 +69,10 @@ ui<- tagList(
                    dateRangeInput(
                      "Metric3Date", 
                      h3("Date range"), 
-                     start = as.Date(0, origin = "2007-02-01"), 
-                     end = as.Date(0, origin = "2015-02-01"),
+                     start = as.Date(0, origin = "2010-02-01"), 
+                     end = as.Date(0, origin = "2015-10-01"),
                      min = as.Date(0, origin = "2007-02-01"), 
-                     max = as.Date(0, origin = "2015-02-01")),
+                     max = as.Date(0, origin = "2019-10-01")),
                    radioButtons(
                      'Metric3Stock', 
                      'Select Stock', 
