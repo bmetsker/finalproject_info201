@@ -4,7 +4,7 @@
 ui<- tagList(
       navbarPage(
         theme = shinytheme("flatly"),
-        "Midwest Population Analysis",
+        "Federal Funds Rate Change Analysis Analysis",
         
         tabPanel("Introduction",
                  main_title,
