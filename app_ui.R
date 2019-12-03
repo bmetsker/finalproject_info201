@@ -42,21 +42,50 @@ ui<- tagList(
         
         tabPanel("Metric 2",
                  sidebarPanel(
-                   radioButtons('x2', 'Change X-Axis:', choices = c("percollege", "percbelowpoverty", "percchildbelowpovert", "percadultpoverty", "percelderlypoverty"),
-                                selected = "percollege"),
-                   radioButtons('y2', 'Change Y-Axis:', choices = c("poptotal", "popwhite", "popblack", "popamerindian", "popasian"),
-                                selected = "poptotal")
-                   # Radio Buttons on different races 
+                   dateRangeInput(
+                     "Metric2Date", 
+                     h3("Date range"), 
+                     start = as.Date(0, origin = "2007-02-01"), 
+                     end = as.Date(0, origin = "2015-02-01"),
+                     min = as.Date(0, origin = "2007-02-01"), 
+                     max = as.Date(0, origin = "2015-02-01")),
+                   radioButtons(
+                     'Metric2Stock', 
+                     'Select Stock', 
+                     choices = c(
+                       "ProShares", 
+                       "Nasdaq",
+                       "VHT",
+                       "ICF"), 
+                     selected = "Nasdaq"),
                  ),
                  
-                 mainPanel("College Attendace", plotOutput(outputId = "collegechart"),
+                 mainPanel("Volume Chart", plotlyOutput("Metric2Graph"),
                  )
         ),
         
         tabPanel("Metric 3",
-                 sidebarPanel(),
+                 sidebarPanel(
+                   dateRangeInput(
+                     "Metric3Date", 
+                     h3("Date range"), 
+                     start = as.Date(0, origin = "2007-02-01"), 
+                     end = as.Date(0, origin = "2015-02-01"),
+                     min = as.Date(0, origin = "2007-02-01"), 
+                     max = as.Date(0, origin = "2015-02-01")),
+                   radioButtons(
+                     'Metric3Stock', 
+                     'Select Stock', 
+                     choices = c(
+                       "ProShares", 
+                       "Nasdaq",
+                       "VHT",
+                       "ICF"), 
+                     selected = "VHT"),
+                 ),
                  
-                 mainPanel()
+                 mainPanel("Fluctuation Chart", plotlyOutput("Metric3Graph"),
+                 )
         )
       )
     )
