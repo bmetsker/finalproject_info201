@@ -24,6 +24,22 @@ ui<- tagList(
                       As clearly seen above, knowing exactly what the stock market like the NYSE will do during rate changes is impossible to predict. However, we believe that we can find a more accurate answers by looking at specific industries rather than the market as a whole.
                       </br>
                       </body>
+                      <h3> Major Takeaways </h3>
+                      <body>
+                      <br>
+                      <ol type=1>
+                      <li> 
+                      We found that there is definitely a correlation between Federal Funds Rate changes and stock performance. In all of the funds that we viewed, there is either a large dip or clime in price or activity whenever monetary policy is changed in a major way.
+                      </li>
+                      <li>
+                      Point 2
+                      </li>
+                      <li>
+                      Point 3
+                      </li>
+                      </ol>
+                      </br>
+                      </body>
                       <h3> Sources Used </h3>
                       <body>
                       <br>
@@ -40,12 +56,18 @@ ui<- tagList(
                       <li>
                       Consumer Goods
                       </li>
+                      <li>
+                      Real Estate
+                      </li>
+                      <li>
+                      Healthcare
+                      </li>
                       </ul>
                       </br>
                       </body>")
         ), 
         
-        tabPanel("Metric 1",
+        tabPanel("Adjusted Close Price",
                  sidebarPanel(
                    dateRangeInput(
                      "Metric1Date", 
@@ -66,11 +88,24 @@ ui<- tagList(
                  ),
                  
                  mainPanel("Comparison Chart", plotlyOutput("Metric1Graph"),
+                           HTML("<h4> Analysis </h4>
+                                <body>
+                                <br>
+                                In this graph we visualize the changes between adjusted day close price and updates in the Federal Funds Rate. In 2008, the Mortgage Crisis forced the Federal Reserve board to cut rates drastically down to almost zero in order to stimulate consumer spending. All funds pictured in the graph reacted negatively to the shift. 
+                                </br>
+                                <br>
+                                In 2016, the Federal Reserve board began to raise rates once again, a sign of sturdy economic growth, and instantaneously, we are able to see stocks react in a very positive manner.
+                                </br>
+                                <br>
+                                Consumer Goods saw the biggest jump when rates were raised once again. This is surprising because this industry typically is slower growth and less reactive to outside factors, hence their lower Beta score (a measure of reactivity).
+                                </br>
+                                </body>
+                                ")
                  )
         ),
         
         
-        tabPanel("Metric 2",
+        tabPanel("Selling Volume",
                  sidebarPanel(
                    dateRangeInput(
                      "Metric2Date", 
