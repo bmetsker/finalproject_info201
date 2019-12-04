@@ -41,7 +41,7 @@ createDataFrame <- function(col) {
   Technology1 <- read.csv("data/First_Trust_NASDAQ_100_Technology_Sector_Index_Fund_05022006_11072019.csv", stringsAsFactors = FALSE) 
   
   Technology <- Technology1 %>%
-    mutate(Fluctuation = Technology1$High - Technology1$Low) %>%
+    mutate(Fluctuation = Technology1$Close - Technology1$Open) %>%
     select(Date, Fluctuation)
   
   colnames(Technology) <- c("Date", paste("Technology Fluctuation"))
@@ -50,7 +50,7 @@ createDataFrame <- function(col) {
   ConsumerGoods1 <- read.csv("data/ProShares_Ultra_Consumer_Goods_02012007_11072019.csv", stringsAsFactors = FALSE) 
   
   ConsumerGoods <-ConsumerGoods1 %>%
-    mutate(Fluctuation = ConsumerGoods1$High - ConsumerGoods1$Low) %>%
+    mutate(Fluctuation = ConsumerGoods1$Close - ConsumerGoods1$Open) %>%
     select(Date, Fluctuation)
   
   colnames(ConsumerGoods) <- c("Date", paste("ConsumerGoods Fluctuation"))
@@ -58,14 +58,14 @@ createDataFrame <- function(col) {
   Healthcare1 <- read.csv("data/VHT.csv", stringsAsFactors = FALSE) 
   
   Healthcare <- Healthcare1 %>%
-    mutate(Fluctuation = Healthcare1$High - Healthcare1$Low) %>%
+    mutate(Fluctuation = Healthcare1$Close - Healthcare1$Open) %>%
     select(Date, Fluctuation)
   
   colnames(Healthcare) <- c("Date", paste("Healthcare Fluctuation"))
   
   RealEstate1 <- read.csv("data/ICF.csv", stringsAsFactors = FALSE) 
   RealEstate <- RealEstate1 %>%
-    mutate(Fluctuation = RealEstate1$High - RealEstate1$Low) %>%
+    mutate(Fluctuation = RealEstate1$Close - RealEstate1$Open) %>%
     select(Date, Fluctuation)
   
   colnames(RealEstate) <- c("Date", paste("RealEstate Fluctuation"))

@@ -158,8 +158,8 @@ ui<- tagList(
                        "ConsumerGoods", 
                        "Technology",
                        "Healthcare",
-                       "RealEstate"), 
-                     selected = "ConsumerGoods"),
+                       "RealEstate")
+                     )
                  ),
                  
                  mainPanel("Fluctuation Chart", plotlyOutput("Metric3Graph"),
