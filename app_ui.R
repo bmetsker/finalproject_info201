@@ -32,10 +32,10 @@ ui<- tagList(
                       We found that there is definitely a correlation between Federal Funds Rate changes and stock performance. In all of the funds that we viewed, there is either a large dip or clime in price or activity whenever monetary policy is changed in a major way.
                       </li>
                       <li>
-                      Point 2
+                      In times of recession when the Fed is lowering rates, Real Estate investment prices often drop the most. Consumer Goods are the safest investment as there is the least amount of reactivity.
                       </li>
                       <li>
-                      Point 3
+                      When the economy is inflated and growing rapidly, Healthcare and Technology is the best place for investors to store their money, according to our data. These two experience the most growth while real estate and consumer goods are definitely more of a slow growth investment.
                       </li>
                       </ol>
                       </br>
@@ -126,6 +126,19 @@ ui<- tagList(
                  ),
                  
                  mainPanel("Volume Chart", plotlyOutput("Metric2Graph"),
+                           HTML("<h4> Analysis </h4>
+                                <body>
+                                <br>
+                                This chart visualizes the differences in trading volume over several years. Since the different funds have different average levels of activity, it is important to view the chart on a common size basis (look at proportions, not necessarily the numeric values).
+                                </br>
+                                <br>
+                                Trading volume is one of the best and most underrated tells of the success or failure of stock price. It is essentially the number of buys or sells of a stock on a given day; in other words, the activity. On days when significant economic events occur, trading volume typically skyrockets as a reaction. 
+                                </br>
+                                <br>
+                                As mentioned in previous tabs, there are two main economic events that we are looking at: the extreme rate cuts in 2008 and the long-awaited rate raise in 2016. One of the most notable volume changes occurred in the Real Estate sector in 2008. It appears that there was an absolutely massive selloff following rate cuts and the mortgage crisis. Also, Technology typically does best when rates are raised according to our visualization.
+                                </br>
+                                </body>
+                                ")
                  )
         ),
         
@@ -150,6 +163,16 @@ ui<- tagList(
                  ),
                  
                  mainPanel("Fluctuation Chart", plotlyOutput("Metric3Graph"),
+                           HTML("<h4> Analysis </h4>
+                                <body>
+                                <br>
+                                The fluctuation rate is the difference between opening price and closing price for a single trading day. In this visualization we picture which funds showed the most reactivity to Federal Funds Rate changes. Since the funds trade at different prices, it is important to look at the differences between highs and lows rather than the numeric values shown on the Y Axis. 
+                                </br>
+                                <br>
+                                What we found with this analysis is that rate changes do indeed have an effect on the funds fluctuation rates. It is seen most clearly in Real Estate, as there are very large price differences for the fund on days when rates are changed.
+                                </br>
+                                </body>
+                                ")
                  )
         )
       )
