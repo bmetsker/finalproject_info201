@@ -142,11 +142,11 @@ ui<- tagList(
                      'Metric3Stock', 
                      'Select Stock', 
                      choices = c(
-                       "ProShares", 
-                       "Nasdaq",
-                       "VHT",
-                       "ICF"), 
-                     selected = "VHT"),
+                       "ConsumerGoods", 
+                       "Technology",
+                       "Healthcare",
+                       "RealEstate"), 
+                     selected = "ConsumerGoods"),
                  ),
                  
                  mainPanel("Fluctuation Chart", plotlyOutput("Metric3Graph"),
