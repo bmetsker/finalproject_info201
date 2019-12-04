@@ -16,6 +16,20 @@ server <- function(input, output) {
   )
 
   output$Metric3Graph <- renderPlotly(
-    fluctuationCompareGraph(input$Metric3Date[1], input$Metric3Date[2], paste(input$Metric3Stock,"Fluctuation"), Fluctuation)
+    fluctuationCompareGraph(input$Metric3Date[1], input$Metric3Date[2], input$Metric3Stock, FluctuationData)
   )
+  
+  convert <- function(input) {
+    if(input == 1) {
+      return("Consumer Goods")
+    } else if (input == 2) {
+      return("Technology")
+    } else if (input == 3) {
+      return("Healthcare")
+    } else if (input == 4) {
+      return("RealEstate")
+    } else {
+      return(null);
+    }
+  }
 }

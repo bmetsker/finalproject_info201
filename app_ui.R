@@ -151,7 +151,7 @@ ui<- tagList(
                      end = as.Date(0, origin = "2015-10-01"),
                      min = as.Date(0, origin = "2007-02-01"), 
                      max = as.Date(0, origin = "2019-10-01")),
-                   radioButtons(
+                   checkboxGroupInput(
                      'Metric3Stock', 
                      'Select Stock', 
                      choices = c(

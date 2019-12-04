@@ -32,7 +32,11 @@ library("plotly")
 library("dplyr")
 
 
-createDataFrame <- function() {
+createDataFrame <- function(col) {
+  
+  FederalFund <- read.csv("data/Effective_Feceral_Funds_Rate_07011954_10012019.csv", stringsAsFactors = FALSE)
+  
+  colnames(FederalFund) <- c("Date", "FedFunds")
   
   Technology1 <- read.csv("data/First_Trust_NASDAQ_100_Technology_Sector_Index_Fund_05022006_11072019.csv", stringsAsFactors = FALSE) 
   
@@ -69,20 +73,21 @@ createDataFrame <- function() {
   DataFrame <- ConsumerGoods %>%
     inner_join(Technology) %>%
     inner_join(Healthcare) %>%
-    inner_join(RealEstate)
+    inner_join(RealEstate) %>%
+    inner_join(FederalFund)
 }
 
 
 #Pot for industry index fluctuation 
 
-fluctuationCompareGraph <- function(date1, date2, col, ourData) {
+fluctuationCompareGraph <- function(date1, date2, inputVector, ourData) {
   
   range <- filter(ourData, Date >= date1 & Date <= date2)
   
-  FluctuationInDifferentIndustry <- plot_ly(
-    data = range,      
+  fluctuationInDifferentIndustry <- plot_ly(range) %>%
+    add_trace(
     x = ~Date,
-    y = range[[col]],
+    y = ~FedFunds,
     type = "scatter",
     mode = "lines",
     alpha = .7,
@@ -94,8 +99,26 @@ fluctuationCompareGraph <- function(date1, date2, col, ourData) {
     xaxis = list(title = "Date"),
     yaxis = list(title = "Fluctuation Rate")
   )
+  
+  if(!is.null(inputVector)) {
+    for(i in 1: length(inputVector)) {
+      y_val <- range[[paste0(inputVector[i], " Fluctuation")]]
+      fluctuationInDifferentIndustry <- fluctuationInDifferentIndustry %>% add_trace(
+        x = ~Date,
+        y = y_val,
+        name = inputVector[i],
+        type = "scatter",
+        mode = "lines",
+        alpha = .7,
+        hovertext = "Fluctuation Rate",
+        fill = 'tozeroy'
+      )
+    }
+    
+  }
+  return (fluctuationInDifferentIndustry) 
 }
 
 
-Fluctuation <- createDataFrame()
+FluctuationData <- createDataFrame("Fluctuation")
 
