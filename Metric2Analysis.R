@@ -48,7 +48,7 @@ VolumeGraph <- function(date1, date2, col, df) {
     layout(
       title = "Volume Rate of the Stocks",
       xaxis = list(title = "Date"),
-      yaxis = list(title = paste(col, "Volume"))
+      yaxis = list(title = paste(col))
     )
   
 }
