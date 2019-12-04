@@ -11,4 +11,3 @@ server <- function(input, output) {
     
     
 }
-#ouput$popchart <- FedCompareGraph(output$Metric1Date[1], output$Metric1Date[2], paste(output$Metric1Stock, "Adj.Close"), AdjData)

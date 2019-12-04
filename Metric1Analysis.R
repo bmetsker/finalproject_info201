@@ -10,32 +10,32 @@ createDataFrame <- function(col) {
   colnames(FederalFund) <- c("Date", "FedFunds")
   
   
-  Nasdaq <- read.csv("data/First_Trust_NASDAQ_100_Technology_Sector_Index_Fund_05022006_11072019.csv", stringsAsFactors = FALSE) %>%
+  Technology <- read.csv("data/First_Trust_NASDAQ_100_Technology_Sector_Index_Fund_05022006_11072019.csv", stringsAsFactors = FALSE) %>%
     select(Date, col)
   
-  colnames(Nasdaq) <- c("Date", paste("Nasdaq", col))
+  colnames(Technology) <- c("Date", paste("Technology", col))
   
   
   ConsumerGoods <- read.csv("data/ProShares_Ultra_Consumer_Goods_02012007_11072019.csv", stringsAsFactors = FALSE) %>%
     select(Date, col)
   
-  colnames(ConsumerGoods) <- c("Date", paste("ProShares", col))
+  colnames(ConsumerGoods) <- c("Date", paste("ConsumerGoods", col))
   
-  VHT <- read.csv("data/VHT.csv", stringsAsFactors = FALSE) %>%
+  Healthcare <- read.csv("data/VHT.csv", stringsAsFactors = FALSE) %>%
     select(Date, col)
   
-  colnames(VHT) <- c("Date", paste("VHT", col))
+  colnames(Healthcare) <- c("Date", paste("Healthcare", col))
   
-  ICF <- read.csv("data/ICF.csv", stringsAsFactors = FALSE) %>%
+  RealEstate <- read.csv("data/ICF.csv", stringsAsFactors = FALSE) %>%
     select(Date, col)
   
-  colnames(ICF) <- c("Date", paste("ICF", col))
+  colnames(RealEstate) <- c("Date", paste("RealEstate", col))
 
   DataFrame <- ConsumerGoods %>%
     inner_join(FederalFund) %>%
-    inner_join(Nasdaq) %>%
-    inner_join(VHT) %>%
-    inner_join(ICF)
+    inner_join(Technology) %>%
+    inner_join(Healthcare) %>%
+    inner_join(RealEstate)
 }
 
 

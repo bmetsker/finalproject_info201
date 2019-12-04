@@ -28,11 +28,11 @@ ui<- tagList(
                      'Metric1Stock', 
                      'Select Stock', 
                      choices = c(
-                       "ProShares", 
-                       "Nasdaq",
-                       "VHT",
-                       "ICF"), 
-                     selected = "ProShares"),
+                       "ConsumerGoods", 
+                       "Technology",
+                       "Healthcare",
+                       "RealEstate"), 
+                     selected = "ConsumerGoods"),
                  ),
                  
                  mainPanel("Comparison Chart", plotlyOutput("Metric1Graph"),

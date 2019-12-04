@@ -23,7 +23,7 @@ ui<- tagList(
                                selected = "poptotal"),
                  ),
                  
-                 mainPanel("Racial Variance", plotOutput(outputId = "popchart"),
+                 mainPanel("Racial Variance", plotOutput(outputId = "popchart")
                  )
         ),
         
