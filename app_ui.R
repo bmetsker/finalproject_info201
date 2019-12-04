@@ -118,18 +118,18 @@ ui<- tagList(
                      'Metric2Stock', 
                      'Select Stock', 
                      choices = c(
-                       "ProShares", 
-                       "Nasdaq",
-                       "VHT",
-                       "ICF"), 
-                     selected = "Nasdaq"),
+                       "ConsumerGoods", 
+                       "Technology",
+                       "Healthcare",
+                       "RealEstate"), 
+                     selected = "Technology"),
                  ),
                  
                  mainPanel("Volume Chart", plotlyOutput("Metric2Graph"),
                  )
         ),
         
-        tabPanel("Metric 3",
+        tabPanel("Fluctuation Rates",
                  sidebarPanel(
                    dateRangeInput(
                      "Metric3Date", 
