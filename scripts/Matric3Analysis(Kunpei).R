@@ -67,6 +67,7 @@ FluctuationInDifferentIndustry <- plot_ly(
   y = ourData[[col]],
   type = "scatter",
   mode = "lines",
+  fill = "tozeroy",
   alpha = .7,
   hovertext = "Fluctuation Rate"
 )
