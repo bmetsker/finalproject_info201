@@ -4,6 +4,7 @@ library(tidyr)
 library(ggplot2)
 library(shinythemes)
 library(rsconnect)
+library(plotly)
 
 source("app_ui.R")
 source("app_server.R")
